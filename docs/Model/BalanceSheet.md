@@ -1,0 +1,47 @@
+# BalanceSheet
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**assets** | **int** |  | [optional] 
+**tangibleAssets** | **int** |  | [optional] 
+**currentAssets** | **int** |  | [optional] 
+**cashAndCashEquivalents** | **int** |  | [optional] 
+**cashAndShortTermInvestments** | **int** |  | [optional] 
+**inventory** | **int** |  | [optional] 
+**currentNetReceivables** | **int** |  | [optional] 
+**nonCurrentAssets** | **int** |  | [optional] 
+**propertyPlantEquipment** | **int** |  | [optional] 
+**accumulatedDepreciationAmortization** | **int** |  | [optional] 
+**intangibleAssets** | **int** |  | [optional] 
+**intangibleAssetsExcludingGoodwill** | **int** |  | [optional] 
+**goodwill** | **int** |  | [optional] 
+**investments** | **int** |  | [optional] 
+**longTermInvestments** | **int** |  | [optional] 
+**shortTermInvestments** | **int** |  | [optional] 
+**otherCurrentAssets** | **int** |  | [optional] 
+**otherNonCurrentAssets** | **int** |  | [optional] 
+**liabilities** | **int** |  | [optional] 
+**currentLiabilities** | **int** |  | [optional] 
+**currentAccountsPayable** | **int** |  | [optional] 
+**deferredRevenue** | **int** |  | [optional] 
+**currentDebt** | **int** |  | [optional] 
+**shortTermDebt** | **int** |  | [optional] 
+**nonCurrentLiabilities** | **int** |  | [optional] 
+**capitalLeaseObligations** | **int** |  | [optional] 
+**longTermDebt** | **int** |  | [optional] 
+**currentLongTermDebt** | **int** |  | [optional] 
+**longTermDebtNonCurrent** | **int** |  | [optional] 
+**shortLongTermDebtTotal** | **int** |  | [optional] 
+**otherCurrentLiabilities** | **int** |  | [optional] 
+**otherNonCurrentLiabilities** | **int** |  | [optional] 
+**equity** | **int** |  | [optional] 
+**treasuryStock** | **int** |  | [optional] 
+**retainedEarnings** | **int** |  | [optional] 
+**commonStock** | **int** |  | [optional] 
+**sharesOutstanding** | **int** |  | [optional] 
+**accumulatedOtherComprehensiveIncome** | **int** |  | [optional] 
+**workingCapital** | **int** |  | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
