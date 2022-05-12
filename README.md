@@ -51,9 +51,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Query String
-$config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
+$config = EquiblesStocks\Configuration::getDefaultConfiguration();
 
 $apiInstance = new EquiblesStocks\Clients\ExchangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -71,9 +69,7 @@ try {
 }
 
 // Configure API key authorization: Query String
-$config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
+$config = EquiblesStocks\Configuration::getDefaultConfiguration();
 
 $apiInstance = new EquiblesStocks\Clients\ExchangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -91,9 +87,7 @@ try {
 }
 
 // Configure API key authorization: Query String
-$config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
+$config = EquiblesStocks\Configuration::getDefaultConfiguration();
 
 $apiInstance = new EquiblesStocks\Clients\ExchangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
