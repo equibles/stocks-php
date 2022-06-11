@@ -130,6 +130,7 @@ Class | Method | HTTP request | Description
 *PerformanceApi* | [**callList**](docs/Api/PerformanceApi.md#calllist) | **GET** /stocks/performance/list | Performance
 *PricesApi* | [**endOfDay**](docs/Api/PricesApi.md#endofday) | **GET** /stocks/prices/endofday | End Of Day Prices
 *PricesApi* | [**intraday**](docs/Api/PricesApi.md#intraday) | **GET** /stocks/prices/intraday | Intraday Prices
+*PricesApi* | [**summart**](docs/Api/PricesApi.md#summart) | **GET** /stocks/prices/summary | Latest trading day summary
 *SectorsApi* | [**callList**](docs/Api/SectorsApi.md#calllist) | **GET** /stocks/sectors/list | List Sectors
 *SectorsApi* | [**searchStocks**](docs/Api/SectorsApi.md#searchstocks) | **GET** /stocks/sectors/searchstocks | List Stocks
 *StocksApi* | [**callList**](docs/Api/StocksApi.md#calllist) | **GET** /stocks/list | List Stocks
@@ -167,6 +168,8 @@ Class | Method | HTTP request | Description
  - [Performance](docs/Model/Performance.md)
  - [PerformanceResponse](docs/Model/PerformanceResponse.md)
  - [Price](docs/Model/Price.md)
+ - [PriceSummary](docs/Model/PriceSummary.md)
+ - [PriceSummaryResponse](docs/Model/PriceSummaryResponse.md)
  - [PricesResponse](docs/Model/PricesResponse.md)
  - [Publisher](docs/Model/Publisher.md)
  - [PublishersResponse](docs/Model/PublishersResponse.md)
