@@ -1,5 +1,4 @@
 # EquiblesStocks
-
 ## Requirements
 
 PHP 5.5 and later

@@ -62,6 +62,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'todayOpen' => 'double',
 'todayHigh' => 'double',
 'todayLow' => 'double',
+'todayTime' => '\DateTime',
+'todayVolume' => 'int',
 'todayChange' => 'double',
 'todayChangePercentage' => 'double',
 'latestCompletedTradingDayOpen' => 'double',
@@ -70,6 +72,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'latestCompletedTradingDayClose' => 'double',
 'latestCompletedTradingDayChangePercentage' => 'double',
 'latestCompletedTradingDayChange' => 'double',
+'latestCompletedTradingDayTime' => '\DateTime',
+'latestCompletedTradingDayVolume' => 'int',
 'fiftyTwoWeekLow' => 'double',
 'fiftyTwoWeekHigh' => 'double'    ];
 
@@ -85,6 +89,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'todayOpen' => 'double',
 'todayHigh' => 'double',
 'todayLow' => 'double',
+'todayTime' => 'date-time',
+'todayVolume' => 'int64',
 'todayChange' => 'double',
 'todayChangePercentage' => 'double',
 'latestCompletedTradingDayOpen' => 'double',
@@ -93,6 +99,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'latestCompletedTradingDayClose' => 'double',
 'latestCompletedTradingDayChangePercentage' => 'double',
 'latestCompletedTradingDayChange' => 'double',
+'latestCompletedTradingDayTime' => 'date-time',
+'latestCompletedTradingDayVolume' => 'int64',
 'fiftyTwoWeekLow' => 'double',
 'fiftyTwoWeekHigh' => 'double'    ];
 
@@ -129,6 +137,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'todayOpen' => 'todayOpen',
 'todayHigh' => 'todayHigh',
 'todayLow' => 'todayLow',
+'todayTime' => 'todayTime',
+'todayVolume' => 'todayVolume',
 'todayChange' => 'todayChange',
 'todayChangePercentage' => 'todayChangePercentage',
 'latestCompletedTradingDayOpen' => 'latestCompletedTradingDayOpen',
@@ -137,6 +147,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'latestCompletedTradingDayClose' => 'latestCompletedTradingDayClose',
 'latestCompletedTradingDayChangePercentage' => 'latestCompletedTradingDayChangePercentage',
 'latestCompletedTradingDayChange' => 'latestCompletedTradingDayChange',
+'latestCompletedTradingDayTime' => 'latestCompletedTradingDayTime',
+'latestCompletedTradingDayVolume' => 'latestCompletedTradingDayVolume',
 'fiftyTwoWeekLow' => 'fiftyTwoWeekLow',
 'fiftyTwoWeekHigh' => 'fiftyTwoWeekHigh'    ];
 
@@ -152,6 +164,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'todayOpen' => 'setTodayOpen',
 'todayHigh' => 'setTodayHigh',
 'todayLow' => 'setTodayLow',
+'todayTime' => 'setTodayTime',
+'todayVolume' => 'setTodayVolume',
 'todayChange' => 'setTodayChange',
 'todayChangePercentage' => 'setTodayChangePercentage',
 'latestCompletedTradingDayOpen' => 'setLatestCompletedTradingDayOpen',
@@ -160,6 +174,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'latestCompletedTradingDayClose' => 'setLatestCompletedTradingDayClose',
 'latestCompletedTradingDayChangePercentage' => 'setLatestCompletedTradingDayChangePercentage',
 'latestCompletedTradingDayChange' => 'setLatestCompletedTradingDayChange',
+'latestCompletedTradingDayTime' => 'setLatestCompletedTradingDayTime',
+'latestCompletedTradingDayVolume' => 'setLatestCompletedTradingDayVolume',
 'fiftyTwoWeekLow' => 'setFiftyTwoWeekLow',
 'fiftyTwoWeekHigh' => 'setFiftyTwoWeekHigh'    ];
 
@@ -175,6 +191,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'todayOpen' => 'getTodayOpen',
 'todayHigh' => 'getTodayHigh',
 'todayLow' => 'getTodayLow',
+'todayTime' => 'getTodayTime',
+'todayVolume' => 'getTodayVolume',
 'todayChange' => 'getTodayChange',
 'todayChangePercentage' => 'getTodayChangePercentage',
 'latestCompletedTradingDayOpen' => 'getLatestCompletedTradingDayOpen',
@@ -183,6 +201,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
 'latestCompletedTradingDayClose' => 'getLatestCompletedTradingDayClose',
 'latestCompletedTradingDayChangePercentage' => 'getLatestCompletedTradingDayChangePercentage',
 'latestCompletedTradingDayChange' => 'getLatestCompletedTradingDayChange',
+'latestCompletedTradingDayTime' => 'getLatestCompletedTradingDayTime',
+'latestCompletedTradingDayVolume' => 'getLatestCompletedTradingDayVolume',
 'fiftyTwoWeekLow' => 'getFiftyTwoWeekLow',
 'fiftyTwoWeekHigh' => 'getFiftyTwoWeekHigh'    ];
 
@@ -250,6 +270,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
         $this->container['todayOpen'] = isset($data['todayOpen']) ? $data['todayOpen'] : null;
         $this->container['todayHigh'] = isset($data['todayHigh']) ? $data['todayHigh'] : null;
         $this->container['todayLow'] = isset($data['todayLow']) ? $data['todayLow'] : null;
+        $this->container['todayTime'] = isset($data['todayTime']) ? $data['todayTime'] : null;
+        $this->container['todayVolume'] = isset($data['todayVolume']) ? $data['todayVolume'] : null;
         $this->container['todayChange'] = isset($data['todayChange']) ? $data['todayChange'] : null;
         $this->container['todayChangePercentage'] = isset($data['todayChangePercentage']) ? $data['todayChangePercentage'] : null;
         $this->container['latestCompletedTradingDayOpen'] = isset($data['latestCompletedTradingDayOpen']) ? $data['latestCompletedTradingDayOpen'] : null;
@@ -258,6 +280,8 @@ class PriceSummary implements ModelInterface, ArrayAccess
         $this->container['latestCompletedTradingDayClose'] = isset($data['latestCompletedTradingDayClose']) ? $data['latestCompletedTradingDayClose'] : null;
         $this->container['latestCompletedTradingDayChangePercentage'] = isset($data['latestCompletedTradingDayChangePercentage']) ? $data['latestCompletedTradingDayChangePercentage'] : null;
         $this->container['latestCompletedTradingDayChange'] = isset($data['latestCompletedTradingDayChange']) ? $data['latestCompletedTradingDayChange'] : null;
+        $this->container['latestCompletedTradingDayTime'] = isset($data['latestCompletedTradingDayTime']) ? $data['latestCompletedTradingDayTime'] : null;
+        $this->container['latestCompletedTradingDayVolume'] = isset($data['latestCompletedTradingDayVolume']) ? $data['latestCompletedTradingDayVolume'] : null;
         $this->container['fiftyTwoWeekLow'] = isset($data['fiftyTwoWeekLow']) ? $data['fiftyTwoWeekLow'] : null;
         $this->container['fiftyTwoWeekHigh'] = isset($data['fiftyTwoWeekHigh']) ? $data['fiftyTwoWeekHigh'] : null;
     }
@@ -426,6 +450,54 @@ class PriceSummary implements ModelInterface, ArrayAccess
     public function setTodayLow($todayLow)
     {
         $this->container['todayLow'] = $todayLow;
+
+        return $this;
+    }
+
+    /**
+     * Gets todayTime
+     *
+     * @return \DateTime
+     */
+    public function getTodayTime()
+    {
+        return $this->container['todayTime'];
+    }
+
+    /**
+     * Sets todayTime
+     *
+     * @param \DateTime $todayTime todayTime
+     *
+     * @return $this
+     */
+    public function setTodayTime($todayTime)
+    {
+        $this->container['todayTime'] = $todayTime;
+
+        return $this;
+    }
+
+    /**
+     * Gets todayVolume
+     *
+     * @return int
+     */
+    public function getTodayVolume()
+    {
+        return $this->container['todayVolume'];
+    }
+
+    /**
+     * Sets todayVolume
+     *
+     * @param int $todayVolume todayVolume
+     *
+     * @return $this
+     */
+    public function setTodayVolume($todayVolume)
+    {
+        $this->container['todayVolume'] = $todayVolume;
 
         return $this;
     }
@@ -618,6 +690,54 @@ class PriceSummary implements ModelInterface, ArrayAccess
     public function setLatestCompletedTradingDayChange($latestCompletedTradingDayChange)
     {
         $this->container['latestCompletedTradingDayChange'] = $latestCompletedTradingDayChange;
+
+        return $this;
+    }
+
+    /**
+     * Gets latestCompletedTradingDayTime
+     *
+     * @return \DateTime
+     */
+    public function getLatestCompletedTradingDayTime()
+    {
+        return $this->container['latestCompletedTradingDayTime'];
+    }
+
+    /**
+     * Sets latestCompletedTradingDayTime
+     *
+     * @param \DateTime $latestCompletedTradingDayTime latestCompletedTradingDayTime
+     *
+     * @return $this
+     */
+    public function setLatestCompletedTradingDayTime($latestCompletedTradingDayTime)
+    {
+        $this->container['latestCompletedTradingDayTime'] = $latestCompletedTradingDayTime;
+
+        return $this;
+    }
+
+    /**
+     * Gets latestCompletedTradingDayVolume
+     *
+     * @return int
+     */
+    public function getLatestCompletedTradingDayVolume()
+    {
+        return $this->container['latestCompletedTradingDayVolume'];
+    }
+
+    /**
+     * Sets latestCompletedTradingDayVolume
+     *
+     * @param int $latestCompletedTradingDayVolume latestCompletedTradingDayVolume
+     *
+     * @return $this
+     */
+    public function setLatestCompletedTradingDayVolume($latestCompletedTradingDayVolume)
+    {
+        $this->container['latestCompletedTradingDayVolume'] = $latestCompletedTradingDayVolume;
 
         return $this;
     }

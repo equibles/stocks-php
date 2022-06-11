@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **todayOpen** | **double** |  | [optional] 
 **todayHigh** | **double** |  | [optional] 
 **todayLow** | **double** |  | [optional] 
+**todayTime** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**todayVolume** | **int** |  | [optional] 
 **todayChange** | **double** |  | [optional] 
 **todayChangePercentage** | **double** |  | [optional] 
 **latestCompletedTradingDayOpen** | **double** |  | [optional] 
@@ -17,6 +19,8 @@ Name | Type | Description | Notes
 **latestCompletedTradingDayClose** | **double** |  | [optional] 
 **latestCompletedTradingDayChangePercentage** | **double** |  | [optional] 
 **latestCompletedTradingDayChange** | **double** |  | [optional] 
+**latestCompletedTradingDayTime** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**latestCompletedTradingDayVolume** | **int** |  | [optional] 
 **fiftyTwoWeekLow** | **double** |  | [optional] 
 **fiftyTwoWeekHigh** | **double** |  | [optional] 
 
