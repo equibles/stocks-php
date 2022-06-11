@@ -765,7 +765,7 @@ class PricesApi
     }
 
     /**
-     * Operation summart
+     * Operation summary
      *
      * Latest trading day summary
      *
@@ -776,14 +776,14 @@ class PricesApi
      * @throws \InvalidArgumentException
      * @return \EquiblesStocks\Models\PriceSummaryResponse
      */
-    public function summart($apiKey, $fullTicker)
+    public function summary($apiKey, $fullTicker)
     {
-        list($response) = $this->summartWithHttpInfo($apiKey, $fullTicker);
+        list($response) = $this->summaryWithHttpInfo($apiKey, $fullTicker);
         return $response;
     }
 
     /**
-     * Operation summartWithHttpInfo
+     * Operation summaryWithHttpInfo
      *
      * Latest trading day summary
      *
@@ -794,10 +794,10 @@ class PricesApi
      * @throws \InvalidArgumentException
      * @return array of \EquiblesStocks\Models\PriceSummaryResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function summartWithHttpInfo($apiKey, $fullTicker)
+    public function summaryWithHttpInfo($apiKey, $fullTicker)
     {
         $returnType = '\EquiblesStocks\Models\PriceSummaryResponse';
-        $request = $this->summartRequest($apiKey, $fullTicker);
+        $request = $this->summaryRequest($apiKey, $fullTicker);
 
         try {
             $options = $this->createHttpClientOption();
@@ -883,7 +883,7 @@ class PricesApi
     }
 
     /**
-     * Operation summartAsync
+     * Operation summaryAsync
      *
      * Latest trading day summary
      *
@@ -893,9 +893,9 @@ class PricesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function summartAsync($apiKey, $fullTicker)
+    public function summaryAsync($apiKey, $fullTicker)
     {
-        return $this->summartAsyncWithHttpInfo($apiKey, $fullTicker)
+        return $this->summaryAsyncWithHttpInfo($apiKey, $fullTicker)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -904,7 +904,7 @@ class PricesApi
     }
 
     /**
-     * Operation summartAsyncWithHttpInfo
+     * Operation summaryAsyncWithHttpInfo
      *
      * Latest trading day summary
      *
@@ -914,10 +914,10 @@ class PricesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function summartAsyncWithHttpInfo($apiKey, $fullTicker)
+    public function summaryAsyncWithHttpInfo($apiKey, $fullTicker)
     {
         $returnType = '\EquiblesStocks\Models\PriceSummaryResponse';
-        $request = $this->summartRequest($apiKey, $fullTicker);
+        $request = $this->summaryRequest($apiKey, $fullTicker);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -957,7 +957,7 @@ class PricesApi
     }
 
     /**
-     * Create request for operation 'summart'
+     * Create request for operation 'summary'
      *
      * @param  string $apiKey (required)
      * @param  string $fullTicker The fully qualified ticker of the stock. Example: AAPL.XNAS (required)
@@ -965,18 +965,18 @@ class PricesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function summartRequest($apiKey, $fullTicker)
+    protected function summaryRequest($apiKey, $fullTicker)
     {
         // verify the required parameter 'apiKey' is set
         if ($apiKey === null || (is_array($apiKey) && count($apiKey) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $apiKey when calling summart'
+                'Missing the required parameter $apiKey when calling summary'
             );
         }
         // verify the required parameter 'fullTicker' is set
         if ($fullTicker === null || (is_array($fullTicker) && count($fullTicker) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $fullTicker when calling summart'
+                'Missing the required parameter $fullTicker when calling summary'
             );
         }
 

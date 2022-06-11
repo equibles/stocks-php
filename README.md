@@ -51,7 +51,9 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Query String
-$config = EquiblesStocks\Configuration::getDefaultConfiguration();
+$config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
 
 $apiInstance = new EquiblesStocks\Clients\ExchangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -69,7 +71,9 @@ try {
 }
 
 // Configure API key authorization: Query String
-$config = EquiblesStocks\Configuration::getDefaultConfiguration();
+$config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
 
 $apiInstance = new EquiblesStocks\Clients\ExchangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -87,7 +91,9 @@ try {
 }
 
 // Configure API key authorization: Query String
-$config = EquiblesStocks\Configuration::getDefaultConfiguration();
+$config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
 
 $apiInstance = new EquiblesStocks\Clients\ExchangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -124,7 +130,7 @@ Class | Method | HTTP request | Description
 *PerformanceApi* | [**callList**](docs/Api/PerformanceApi.md#calllist) | **GET** /stocks/performance/list | Performance
 *PricesApi* | [**endOfDay**](docs/Api/PricesApi.md#endofday) | **GET** /stocks/prices/endofday | End Of Day Prices
 *PricesApi* | [**intraday**](docs/Api/PricesApi.md#intraday) | **GET** /stocks/prices/intraday | Intraday Prices
-*PricesApi* | [**summart**](docs/Api/PricesApi.md#summart) | **GET** /stocks/prices/summary | Latest trading day summary
+*PricesApi* | [**summary**](docs/Api/PricesApi.md#summary) | **GET** /stocks/prices/summary | Latest trading day summary
 *SectorsApi* | [**callList**](docs/Api/SectorsApi.md#calllist) | **GET** /stocks/sectors/list | List Sectors
 *SectorsApi* | [**searchStocks**](docs/Api/SectorsApi.md#searchstocks) | **GET** /stocks/sectors/searchstocks | List Stocks
 *StocksApi* | [**callList**](docs/Api/StocksApi.md#calllist) | **GET** /stocks/list | List Stocks

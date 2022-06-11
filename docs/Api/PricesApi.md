@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**endOfDay**](PricesApi.md#endofday) | **GET** /stocks/prices/endofday | End Of Day Prices
 [**intraday**](PricesApi.md#intraday) | **GET** /stocks/prices/intraday | Intraday Prices
+[**summary**](PricesApi.md#summary) | **GET** /stocks/prices/summary | Latest trading day summary
 
 # **endOfDay**
 > \EquiblesStocks\Models\PricesResponse endOfDay($apiKey, $fullTicker, $startTime, $endTime, $sort, $page, $pageSize)
@@ -127,6 +128,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\EquiblesStocks\Models\PricesResponse**](../Model/PricesResponse.md)
+
+### Authorization
+
+[Query String](../../README.md#Query String)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **summary**
+> \EquiblesStocks\Models\PriceSummaryResponse summary($apiKey, $fullTicker)
+
+Latest trading day summary
+
+A summary of the latest trading day
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: Query String
+$config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = EquiblesStocks\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
+
+$apiInstance = new EquiblesStocks\Clients\PricesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$apiKey = "apiKey_example"; // string | 
+$fullTicker = "fullTicker_example"; // string | The fully qualified ticker of the stock. Example: AAPL.XNAS
+
+try {
+    $result = $apiInstance->summary($apiKey, $fullTicker);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PricesApi->summary: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiKey** | **string**|  |
+ **fullTicker** | **string**| The fully qualified ticker of the stock. Example: AAPL.XNAS |
+
+### Return type
+
+[**\EquiblesStocks\Models\PriceSummaryResponse**](../Model/PriceSummaryResponse.md)
 
 ### Authorization
 
